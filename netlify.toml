@@ -1,6 +1,13 @@
 [build.environment]
-  NODE_VERSION = "24"
-  
+  NODE_VERSION = "20"
+
 [functions]
   directory = "netlify/functions/"
   node_bundler = "esbuild"
+  external_node_modules = ["@waline/vercel", "serverless-http"]
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/comment/:splat"
+  status = 200
+  force = true
