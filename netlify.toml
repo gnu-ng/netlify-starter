@@ -1,10 +1,9 @@
 [build.environment]
-  NODE_VERSION = "20"
+  NODE_VERSION = "22"
 
 [functions]
   directory = "netlify/functions/"
   node_bundler = "esbuild"
-  external_node_modules = ["@waline/vercel", "serverless-http"]
 
 [[redirects]]
   from = "/api/*"
